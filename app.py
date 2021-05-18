@@ -17,7 +17,7 @@ async def main():
 
     numero_trades = 0
     actual = 0
-    billetera = 1000000
+    billetera = 100
     lista = []
     # then start receiving messages
     async with ts as tscm:
@@ -37,8 +37,8 @@ async def main():
                     billetera = billetera / precio_actual
                     print(f"Compraste {billetera}")
                 else:
-                    profit_loss = ((billetera * precio_actual) - 1000000)
-                    print(f"Ahora tienes { billetera * precio_actual}, ${profit_loss}")
+                    profit_loss = round(((billetera * precio_actual) - 100), 7)
+                    print(f"Ahora tienes { billetera * precio_actual}, {profit_loss}%")
 
                 lista = []
 
