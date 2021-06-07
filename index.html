@@ -10,7 +10,7 @@
     <script>
         var socket = io();
         socket.on("price", function (msg) {
-            console.log(msg)
+            //console.log(msg)
             document.getElementById("price").innerText = msg
             
         });
